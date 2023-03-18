@@ -14,16 +14,13 @@ class _LoginPageState extends State<LoginPage> {
       backgroundColor: Color.fromARGB(255, 111, 219, 223),
       body: SafeArea(
         child: Center(
-          child: Column(children: [
-            SizedBox(
-              height: 25,
-            ),
+          child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
             // Bem vindo
             Text(
               'Olá, novamente!',
               style: TextStyle(
                 fontWeight: FontWeight.bold,
-                fontSize: 24,
+                fontSize: 36,
               ),
             ),
             SizedBox(
@@ -36,7 +33,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(
-              height: 20,
+              height: 50,
             ),
 
             // campo de email
@@ -85,7 +82,7 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 25,
             ),
 
             // botão de login
@@ -109,9 +106,28 @@ class _LoginPageState extends State<LoginPage> {
               ),
             ),
             SizedBox(
-              height: 10,
+              height: 25,
             ),
+
             // Não tem conta? Registre-se
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Text(
+                  'Não tem conta? ',
+                  style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+                Text(
+                  'Registre-se',
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ],
+            ),
           ]),
         ),
       ),
