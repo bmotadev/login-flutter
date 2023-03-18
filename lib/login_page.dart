@@ -11,10 +11,10 @@ class _LoginPageState extends State<LoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[250],
+      backgroundColor: Color.fromARGB(255, 111, 219, 223),
       body: SafeArea(
         child: Center(
-          child: Column(children: const [
+          child: Column(children: [
             SizedBox(
               height: 25,
             ),
@@ -32,7 +32,7 @@ class _LoginPageState extends State<LoginPage> {
             Text(
               'Seja bem-vindo!',
               style: TextStyle(
-                fontSize: 24,
+                fontSize: 20,
               ),
             ),
             SizedBox(
@@ -40,7 +40,25 @@ class _LoginPageState extends State<LoginPage> {
             ),
 
             // campo de email
-            TextField()
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Color.fromARGB(255, 182, 243, 243),
+                  border: Border.all(color: Colors.white),
+                  borderRadius: BorderRadius.circular(12),
+                ),
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 20.0),
+                  child: TextField(
+                    decoration: InputDecoration(
+                      border: InputBorder.none,
+                      hintText: 'Email',
+                    ),
+                  ),
+                ),
+              ),
+            ),
             // campo de senha
 
             // botão de login
